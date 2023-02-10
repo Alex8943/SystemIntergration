@@ -5,7 +5,7 @@ import os
 import xml.etree.ElementTree as ET
 
 
-"""
+
 #READING MY .csv FILE and parsing:
 print('Reading my .csv file: ')
 lines = []
@@ -44,11 +44,11 @@ for i in data['userInfo']:
 # Closing file
 f.close()
 
-"""
+
 
 #__________________________________________________________
 
-#Reading a .yaml file
+#Reading a .yaml file and parse it to a python list
 print('Reading my yaml file: ')
 with open('./files/test.yaml', 'r') as file:
     docs = yaml.safe_load_all(file)
@@ -60,7 +60,7 @@ with open('./files/test.yaml', 'r') as file:
 
 #___________________________________________________________
 
-""""
+
 #READING A .txt file
 
 print('Reading my txt file: ')
@@ -102,7 +102,7 @@ for elem in root:
     print(elem.text) 
     for subelem in elem: 
         print(subelem.text)
- """ 
+
 
 
 
