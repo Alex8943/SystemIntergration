@@ -1,0 +1,11 @@
+{
+    "userInfo": [
+        {
+            "id": 1, 
+            "name": "Alexander", 
+            "lastName": "Stohn", 
+            "country": "Denmark",
+            "mobilePhone": "+45 50 59 44 80"
+        }
+    ]
+}
