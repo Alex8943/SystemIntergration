@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "05-basic-server"
+version = "0.1.0"
+description = ""
+authors = ["Alex8943 <65241585+Alex8943@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "05_basic_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+emoji = "^2.2.0"
+fastapi = "^0.91.0"
+uvicorn = "^0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

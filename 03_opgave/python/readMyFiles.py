@@ -81,7 +81,7 @@ with open(r"./files/test.txt", 'r') as fp:
     
     #Loop thorug enumerated list and print each element
     for idx, x in enumerate(lines):
-        print(idx, x)
+        print(idx, x) 
 
 
 
