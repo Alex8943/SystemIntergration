@@ -5,12 +5,16 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
+    "envariable-dev": "set myvariable=secret && nodemon index.js",
+    "inject-dotenv": "gotenv -e .env index.js", 
+    "inject-dotenv2": "node -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "env": "^0.0.2"
   }
 }
