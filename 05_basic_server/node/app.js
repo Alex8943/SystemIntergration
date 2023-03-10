@@ -1,4 +1,4 @@
-import express from "express"; 
+import express, { json } from "express"; 
 const app = express(); 
 import fs from "fs" 
 
@@ -22,10 +22,10 @@ app.get("/txt", (req, res) => {
         for (let key in textByLine) 
             `${key}: ${textByLine[key]}`;
             
-        
-    
+            
 
     res.send(textByLine)
+
 
 }); 
 

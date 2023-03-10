@@ -1,4 +1,4 @@
-Navn: Alexander 
+navn: Alexander 
 efternavn: Stohn
 email: alex8943@stud.kea.dk
 telefon: 54242112
