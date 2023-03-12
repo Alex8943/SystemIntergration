@@ -36,6 +36,4 @@ router.post("/api/users", (req, res) => {
 
 
 
-
-
 export default router;
