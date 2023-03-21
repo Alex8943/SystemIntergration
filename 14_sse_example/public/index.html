@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SSE Example</title>
+</head>
+<body>
+    <h1>Hello dette er en test</h1>
+  <div id="messages"></div>
+  <script>
+    const eventSource = new EventSource('/stream');
+    const messagesDiv = document.getElementById('messages');
+
+    eventSource.addEventListener('message', (event) => {
+      const message = document.createElement('div');
+      message.innerText = event.data;
+      messagesDiv.appendChild(message);
+    
+    });
+  </script>
+</body>
+</html>

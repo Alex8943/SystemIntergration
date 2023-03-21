@@ -14,6 +14,7 @@ const users = [{
  *     responses:
  *       200:
  *         description: Returns all users
+ * 
  */
 router.get("/api/users", (req, res) => {
     res.send({ data: users });
@@ -68,22 +69,30 @@ router.post("/api/users", (req, res) => {
 
 /** 
  * @openapi
- * /api/users/{id}:
- *   delete:
- *     summary: Delete a user by ID
- *     description: Deletes a user by the specified ID.
- *     parameters:
- *       - name: id
- *         in: path
+ * /api/users:
+ * info:
+ *   title: User API
+ *   version: 1.0.0
+ * servers: 
+ *  - url: http://localhost:3000
+ * paths:
+ *   /users/{users}:
+ *    delete:
+ *      summary: Delete a user
+ *      description: Delete a user
+ *      operationId: deleteUser
+ *      parameters:
+ *       - in: path
+ *         name: user
  *         required: true
- *         description: The ID of the user to delete.
+ *         description: The user to delete
  *         schema:
- *           type: integer
- *     responses:
- *       204:
- *         description: The user was deleted succe ssfully.
- *       404:
- *         description: The specified user ID was not found.
+ *          type: string
+ *      responses:
+ *       '200':
+ *        description: User deleted successfully
+ *       '404':
+ *        description: User not found
  */
 
 router.delete("/api/users", (req, res) => {
