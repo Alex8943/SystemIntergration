@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "17-uknnown"
+version = "0.1.0"
+description = ""
+authors = ["Alex8943 <65241585+Alex8943@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "17_uknnown"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.0"
+uvicorn = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

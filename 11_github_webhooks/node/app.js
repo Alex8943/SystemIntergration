@@ -10,6 +10,5 @@ app.post("/githubwebhook", (req, res) => {
     res.send({}); //Denne klient sender et respund til githb
 });
 
-
 const PORT  = 8080
 app.listen(PORT, () => console.log("Server is running on port ", PORT))
