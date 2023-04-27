@@ -1,25 +1,16 @@
-import express from "express";
-import twilio from "twilio";
-import dotenv from "dotenv";
-const app = express();
-
-dotenv.config();
+const express = require('express');
+const app = express(); 
 
 
-function sendSMS() {
-    try{
-        const client = new twilio(process.env.TWILIO_SID, process.env.TWILIO_AUTH_TOKEN);
-        
-        return client.messages
-        .create({body: "Hey this is a message from Alexander", from: process.env.PHONE_NUMBER, to: process.env.PHONE_NUMBER})
-        .then(message => console.log(message + " was sent successfully"));
-    
-    } catch(err) {
-        console.log(err);
-    }
-}; 
-
-
-sendSMS();
+// Download the helper library from https://www.twilio.com/docs/node/install
+// Set environment variables for your credentials
+// Read more at http://twil.io/secure
+const accountSid = "****";
+const authToken = "*****";
+const client = require("twilio")(accountSid, authToken);
+client.messages
+  .create({ body: "Hello from Twilio", from: "+***", to: "*****" })
+    .then(message => console.log(message.body));
 
 app.listen(3000, () => console.log("Server is running on port " + 3000));
+ 
