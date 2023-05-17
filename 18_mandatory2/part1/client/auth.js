@@ -2,8 +2,8 @@ import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20'; 
 
 
-const GOOGLE_CLIENT_ID = "**********************************"; 
-const GOOGLE_CLIENT_SECRET = "**********************************";
+const GOOGLE_CLIENT_ID = "645825230516-mae2g5qhkn9t1kqsv2d828l8h9qg55lc.apps.googleusercontent.com";
+const GOOGLE_CLIENT_SECRET = "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";
 
 passport.use(new GoogleStrategy({
     clientID: GOOGLE_CLIENT_ID,
@@ -19,6 +19,7 @@ passport.use(new GoogleStrategy({
 passport.serializeUser(function(user, done) {
     done(null, user);
 });
+
 passport.deserializeUser(function(user, done) {
     done(null, user);
 });

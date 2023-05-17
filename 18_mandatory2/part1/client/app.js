@@ -2,6 +2,12 @@ import express from "express";
 import passport from "passport";
 import session from "express-session";
 import "./auth.js";
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -18,11 +24,10 @@ function isLoggedIn(req, res, next) {
 
 
 app.get("/", (req, res) => {
-    res.send('<a href="/auth/google">Login with Google</a>');
+    res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
-app.get("/auth/google",
-    passport.authenticate('google', {scope: ['email', 'profile'] })
+app.get("/auth/google",passport.authenticate('google', {scope: ['email', 'profile'] })
 ); 
 
 
